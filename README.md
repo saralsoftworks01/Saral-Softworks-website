@@ -19,7 +19,7 @@ npm run build
 
 ## Structure
 
-- `src/content.js` — all site copy, company details and legal entity info (fill in the `TODO` values)
+- `src/content.js` — all site copy, company details and legal entity info. Set `mybaari.playStoreUrl` once the app is live on Google Play
 - `src/legal/docs.js` — policy documents (company + MyBaari)
 - `src/pages/` — Home, MyBaari, legal pages
 - `vercel.json` — SPA rewrites so routes like `/mybaari/privacy` work on refresh
