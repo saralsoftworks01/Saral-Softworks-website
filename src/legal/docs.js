@@ -5,7 +5,7 @@ import { company, entity } from '../content.js'
 const contactSection = (extra = []) => ({
   h: 'Contact & grievances',
   p: [
-    `For any questions or complaints about this policy, write to our Grievance Officer, ${entity.grievanceOfficer}, at ${entity.grievanceEmail}. We aim to acknowledge complaints within 48 hours and resolve them within 30 days.`,
+    `For any questions or complaints about this policy, write to our Grievance Officer${entity.grievanceOfficer ? `, ${entity.grievanceOfficer},` : ""} at ${entity.grievanceEmail}. We aim to acknowledge complaints within 48 hours and resolve them within 30 days.`,
     ...extra,
     `${entity.legalName}, ${entity.address}.`,
   ],
@@ -236,13 +236,12 @@ export const mybaariRefunds = {
       ],
     },
     {
-      // TODO: confirm these rules with the business before publishing.
       h: 'When you get a refund',
       ul: [
         'Full refund if the hospital, doctor or lab cancels or reschedules your appointment.',
-        'Full refund if you cancel at least [X] hours before your slot.',
+        'Full refund if you cancel at least 24 hours before your slot.',
         'Full refund if payment was deducted but the booking failed.',
-        'No refund if you cancel less than [X] hours before your slot, or do not turn up.',
+        'No refund if you cancel less than 24 hours before your slot, or do not turn up.',
       ],
     },
     {

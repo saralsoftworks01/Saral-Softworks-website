@@ -5,18 +5,17 @@ export const company = {
   tagline: 'Simple technology for everyday life',
   email: 'saralsoftworks@gmail.com',
   phone: '+91 94149 52680',
-  location: 'India', // TODO: city
+  location: 'Rohini, New Delhi',
 }
 
-// Legal identity used across every policy page.
-// TODO: replace bracketed values once the company is registered.
+// Legal identity shown on every policy page.
 export const entity = {
-  legalName: '[Saral Softworks Pvt. Ltd. — confirm legal name]',
-  address: '[Registered office address]',
+  legalName: 'Saral Softworks',
+  address: 'Flat No. 13, Second Floor, Pocket 6, Sector 21, Rohini, New Delhi – 110086',
   email: 'saralsoftworks@gmail.com',
-  grievanceOfficer: '[Grievance Officer name]',
+  grievanceOfficer: '', // optional: add a founder's name once decided
   grievanceEmail: 'saralsoftworks@gmail.com',
-  jurisdiction: '[City], India',
+  jurisdiction: 'New Delhi, India',
   effectiveDate: '12 October 2026',
 }
 
