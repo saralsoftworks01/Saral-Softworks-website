@@ -3,8 +3,8 @@
 export const company = {
   name: 'Saral Softworks',
   tagline: 'Simple technology for everyday life',
-  email: 'hello@saralsoftworks.com', // TODO: confirm
-  phone: '+91 00000 00000', // TODO: confirm
+  email: 'saralsoftworks@gmail.com',
+  phone: '+91 94149 52680',
   location: 'India', // TODO: city
 }
 
@@ -13,11 +13,11 @@ export const company = {
 export const entity = {
   legalName: '[Saral Softworks Pvt. Ltd. — confirm legal name]',
   address: '[Registered office address]',
-  email: 'legal@saralsoftworks.com', // TODO: confirm
+  email: 'saralsoftworks@gmail.com',
   grievanceOfficer: '[Grievance Officer name]',
-  grievanceEmail: 'grievance@saralsoftworks.com', // TODO: confirm
+  grievanceEmail: 'saralsoftworks@gmail.com',
   jurisdiction: '[City], India',
-  effectiveDate: '[DD Month YYYY]',
+  effectiveDate: '12 October 2026',
 }
 
 export const nav = [
