@@ -13,7 +13,7 @@ export const entity = {
   legalName: 'Saral Softworks',
   address: 'Flat No. 13, Second Floor, Pocket 6, Sector 21, Rohini, New Delhi – 110086',
   email: 'saralsoftworks@gmail.com',
-  grievanceOfficer: '', // optional: add a founder's name once decided
+  grievanceOfficer: 'Goutam Singla',
   grievanceEmail: 'saralsoftworks@gmail.com',
   jurisdiction: 'New Delhi, India',
   effectiveDate: '12 October 2026',
