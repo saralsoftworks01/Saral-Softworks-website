@@ -5,7 +5,7 @@ export const company = {
   tagline: 'Simple technology for everyday life',
   email: 'saralsoftworks@gmail.com',
   phone: '+91 94149 52680',
-  location: 'Rohini, New Delhi',
+  location: 'New Delhi',
 }
 
 // Legal identity shown on every policy page.
