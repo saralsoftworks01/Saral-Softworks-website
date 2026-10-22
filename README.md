@@ -30,6 +30,6 @@ npm run build
 |---|---|
 | `/` | Company home |
 | `/mybaari` | MyBaari product page |
-| `/mybaari/privacy`, `/mybaari/terms`, `/mybaari/refunds` | MyBaari policies |
+| `/mybaari/privacy`, `/mybaari/terms`, `/mybaari/refunds`, `/mybaari/delete-account` | MyBaari policies |
 | `/privacy`, `/terms` | Company website policies |
 | `/legal` | All policies |

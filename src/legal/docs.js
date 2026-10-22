@@ -260,4 +260,52 @@ export const mybaariRefunds = {
   ],
 }
 
-export const allDocs = [companyPrivacy, companyTerms, mybaariPrivacy, mybaariTerms, mybaariRefunds]
+export const mybaariAccountDeletion = {
+  slug: 'delete-account',
+  scope: 'mybaari',
+  title: 'MyBaari Account Deletion',
+  summary: 'How to delete your MyBaari or MyBaari Partner account, what is deleted, and what is kept.',
+  sections: [
+    {
+      h: 'Overview',
+      p: [
+        `MyBaari and MyBaari Partner are operated by ${entity.legalName}, Delhi, India.`,
+        'You can delete your account at any time from inside the app. The same mobile number can be used in MyBaari (as a patient) and MyBaari Partner (as hospital, clinic or lab staff); deleting in one app deletes only that app’s account and data — the other app is not affected.',
+      ],
+    },
+    {
+      h: 'MyBaari (patients)',
+      ul: [
+        'Sign in, go to Profile, tap Delete Account and confirm. It happens straight away.',
+        'Deleted: your patient profile (age, gender, city), family members, ratings and support conversations from the MyBaari app. Upcoming appointments and lab bookings are cancelled; refunds of online fees follow the Refund & Cancellation Policy.',
+        'If your number is also used in MyBaari Partner, your staff access there stays and you can keep signing in to MyBaari Partner. Otherwise your login is deleted too.',
+      ],
+    },
+    {
+      h: 'MyBaari Partner (hospital, clinic and lab staff)',
+      ul: [
+        'Sign in, go to More, tap Delete my account and confirm. It happens straight away.',
+        'Deleted: your membership of your workplace (with the role and permissions it gave you), any pending invitations to your number and your support conversations from MyBaari Partner.',
+        'Your MyBaari patient account — bookings, family members and history — is not affected.',
+        'If you are the only admin of your workplace, make another team member an admin first (More → Staff & permissions), or contact MyBaari support to close the workplace — a workplace cannot be left without an admin.',
+        'To stop working at a facility but keep your MyBaari Partner sign-in for another workplace, use More → Leave instead.',
+      ],
+    },
+    {
+      h: 'What is kept',
+      ul: [
+        'Records of past bookings and payments are kept for as long as accounting and tax laws require (generally up to 8 years), so hospitals and labs can maintain their accounts, but your name, phone number and address are removed from them.',
+        'Actions taken in MyBaari Partner (for example registering a walk-in) stay in the workplace’s audit history, as the law and the facility’s records require.',
+      ],
+    },
+    {
+      h: 'Can’t open the app?',
+      p: [
+        `Write to ${company.email} or call/WhatsApp ${company.phone} from the mobile number on the account (or mention it), say which app’s account to delete (MyBaari or MyBaari Partner), and we will confirm the number belongs to you before deleting it, within 7 days.`,
+      ],
+    },
+    contactSection(),
+  ],
+}
+
+export const allDocs = [companyPrivacy, companyTerms, mybaariPrivacy, mybaariTerms, mybaariRefunds, mybaariAccountDeletion]
