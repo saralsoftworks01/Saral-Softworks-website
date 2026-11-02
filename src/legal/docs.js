@@ -318,7 +318,7 @@ export const mybaariAccountDeletion = {
 }
 
 // The three docs below mirror the in-app text exactly (MyBaari/legal/policies/*.md) — don't reword.
-const SUPPORT_CONTACT = '[MyBaari support email / phone — set in the admin web app, Settings → Support contact]'
+const SUPPORT_CONTACT = `${company.email} or ${company.phone}`
 
 export const mybaariMedicalDisclaimer = {
   slug: 'medical-disclaimer',
