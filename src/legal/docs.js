@@ -2,6 +2,9 @@
 // DRAFTS — to be reviewed by a lawyer before launch.
 import { company, entity } from '../content.js'
 
+// Stands in for the apps' "Settings → Support contact" in docs mirrored from the apps.
+const SUPPORT_CONTACT = `${company.email} or ${company.phone}`
+
 const contactSection = (extra = []) => ({
   h: 'Contact & grievances',
   p: [
@@ -226,37 +229,42 @@ export const mybaariTerms = {
 export const mybaariRefunds = {
   slug: 'refunds',
   scope: 'mybaari',
-  title: 'MyBaari Refund & Cancellation Policy',
-  summary: 'When the online platform service fee is refunded, and how long it takes.',
+  title: 'Refund & Cancellation Policy',
+  meta: 'Last updated 27 October 2026 · Applies to: MyBaari (patients)',
+  summary: 'This policy covers amounts paid online to MyBaari through the app (the platform service fee and, for labs, any home-collection fee paid online). Consultation fees and test charges paid at the hospital, clinic or lab are refunded by that facility under its own policy.',
   sections: [
     {
-      h: 'What this covers',
-      p: [
-        'This policy covers only the platform service fee paid online through MyBaari. Consultation and test fees are paid to the hospital or lab directly and are refunded according to their own policy.',
-      ],
-    },
-    {
-      h: 'When you get a refund',
+      h: 'Cancelling a booking',
       ul: [
-        'Full refund if the hospital, doctor or lab cancels or reschedules your appointment.',
-        'Full refund if you cancel at least 24 hours before your slot.',
-        'Full refund if payment was deducted but the booking failed.',
-        'No refund if you cancel less than 24 hours before your slot, or do not turn up.',
+        'You can cancel an upcoming doctor appointment or lab booking from My Appointments until the appointment time.',
+        'If you cancel at least 2 hours before the slot starts, the MyBaari fee you paid online is refundable in full.',
+        'If you cancel within 2 hours of the slot, or do not turn up (no-show), the MyBaari fee is not refundable, because the slot was held for you.',
       ],
     },
     {
-      h: 'How to cancel',
-      p: ['Cancel from the Appointments screen in the app. Refunds that apply are started automatically. For any problem, contact us with your booking ID.'],
+      h: 'When you get a full refund',
+      ul: [
+        'The hospital, clinic or lab cancels or reschedules your booking, or the OPD is closed for your slot.',
+        'Your payment went through but the booking could not be confirmed (for example the slot filled up or the payment arrived after the 20-minute hold expired).',
+        'You were charged twice for the same booking.',
+      ],
     },
     {
-      h: 'Refund timeline',
-      p: ['Refunds are returned to the original payment method via Razorpay, usually within 5–7 working days of approval, depending on your bank.'],
+      h: 'How refunds are paid',
+      ul: [
+        'Refunds go back to the original payment method (UPI, card, net banking or wallet) through Razorpay. We do not refund in cash.',
+        'Eligible refunds are initiated within 3 working days of the cancellation or of your request. Your bank usually credits them within 5–7 working days after that.',
+        'Large refunds are checked by a senior MyBaari team member before they are issued, which can add a working day.',
+      ],
     },
     {
-      h: 'Delivery of service',
-      p: ['MyBaari is a digital service. Your booking confirmation and token are delivered instantly in the app; nothing is shipped physically.'],
+      h: 'How to ask for a refund',
+      p: [`Write to us from Profile → Help & support in the app, or at ${SUPPORT_CONTACT}, with your registered mobile number and the booking date. If money was deducted but no booking appears, include the Razorpay payment ID shown by your bank or UPI app.`],
     },
-    contactSection(),
+    {
+      h: 'Failed payments',
+      p: ['If money was deducted but the payment failed, it is usually reversed automatically by your bank within 5–7 working days. If it is not, contact us with the payment ID and we will help.'],
+    },
   ],
 }
 
@@ -317,8 +325,7 @@ export const mybaariAccountDeletion = {
   ],
 }
 
-// The three docs below mirror the in-app text exactly (MyBaari/legal/policies/*.md) — don't reword.
-const SUPPORT_CONTACT = `${company.email} or ${company.phone}`
+// The three docs below, like mybaariRefunds, mirror the in-app text exactly (MyBaari/legal/policies/*.md) — don't reword.
 
 export const mybaariMedicalDisclaimer = {
   slug: 'medical-disclaimer',
