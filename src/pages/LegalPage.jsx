@@ -39,7 +39,7 @@ export default function LegalPage({ doc }) {
         <article className="legal-doc">
           <p className="kicker">{isProduct ? 'MyBaari' : 'Saral Softworks'} · Legal</p>
           <h1>{doc.title}</h1>
-          <p className="legal-meta">Effective {entity.effectiveDate}</p>
+          <p className="legal-meta">{doc.meta ?? `Effective ${entity.effectiveDate}`}</p>
           <p className="legal-summary">{doc.summary}</p>
           {doc.sections.map((s, i) => (
             <section key={s.h}>

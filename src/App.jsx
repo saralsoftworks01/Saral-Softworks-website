@@ -3,7 +3,7 @@ import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import MyBaariPage from './pages/MyBaariPage.jsx'
 import LegalPage, { LegalIndex, NotFound } from './pages/LegalPage.jsx'
-import { companyPrivacy, companyTerms, mybaariPrivacy, mybaariTerms, mybaariRefunds, mybaariAccountDeletion } from './legal/docs.js'
+import { companyPrivacy, companyTerms, mybaariPrivacy, mybaariTerms, mybaariRefunds, mybaariAccountDeletion, mybaariMedicalDisclaimer, mybaariPartnerTerms, mybaariGrievance } from './legal/docs.js'
 
 export default function App() {
   return (
@@ -16,6 +16,9 @@ export default function App() {
           <Route path="mybaari/terms" element={<LegalPage doc={mybaariTerms} />} />
           <Route path="mybaari/refunds" element={<LegalPage doc={mybaariRefunds} />} />
           <Route path="mybaari/delete-account" element={<LegalPage doc={mybaariAccountDeletion} />} />
+          <Route path="mybaari/medical-disclaimer" element={<LegalPage doc={mybaariMedicalDisclaimer} />} />
+          <Route path="mybaari/partner-terms" element={<LegalPage doc={mybaariPartnerTerms} />} />
+          <Route path="mybaari/grievance" element={<LegalPage doc={mybaariGrievance} />} />
           <Route path="privacy" element={<LegalPage doc={companyPrivacy} />} />
           <Route path="terms" element={<LegalPage doc={companyTerms} />} />
           <Route path="legal" element={<LegalIndex />} />

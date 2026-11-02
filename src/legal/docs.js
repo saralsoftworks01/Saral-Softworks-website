@@ -292,6 +292,15 @@ export const mybaariAccountDeletion = {
       ],
     },
     {
+      h: 'Delete some of your data without deleting your account',
+      ul: [
+        'Family members: in MyBaari, go to Profile → Family members and tap Remove on the member. Their details are deleted straight away.',
+        'Profile details (age, gender, city): in MyBaari, go to Profile, edit and clear or change them.',
+        'Location: MyBaari never stores your location. To stop it being used, turn off location for MyBaari in your phone settings and search by city instead.',
+        `Anything else (for example support conversations or ratings): write to ${company.email} or call/WhatsApp ${company.phone} from your registered mobile number, say what you want deleted, and we will delete it within 7 days. Booking and payment records are kept as described below, but your name, phone number and address can be removed from them.`,
+      ],
+    },
+    {
       h: 'What is kept',
       ul: [
         'Records of past bookings and payments are kept for as long as accounting and tax laws require (generally up to 8 years), so hospitals and labs can maintain their accounts, but your name, phone number and address are removed from them.',
@@ -308,4 +317,154 @@ export const mybaariAccountDeletion = {
   ],
 }
 
-export const allDocs = [companyPrivacy, companyTerms, mybaariPrivacy, mybaariTerms, mybaariRefunds, mybaariAccountDeletion]
+// The three docs below mirror the in-app text exactly (MyBaari/legal/policies/*.md) — don't reword.
+const SUPPORT_CONTACT = '[MyBaari support email / phone — set in the admin web app, Settings → Support contact]'
+
+export const mybaariMedicalDisclaimer = {
+  slug: 'medical-disclaimer',
+  scope: 'mybaari',
+  title: 'Medical Disclaimer',
+  meta: 'Last updated 27 October 2026 · Applies to: MyBaari (patients)',
+  summary: 'Please read this before using MyBaari to book care.',
+  sections: [
+    {
+      h: 'Not for emergencies',
+      p: ['MyBaari is not an emergency service. In a medical emergency call 112 (national emergency number) or 108 (ambulance), or go to the nearest emergency department immediately. Do not wait for a queue token.'],
+    },
+    {
+      h: 'No medical advice',
+      ul: [
+        'MyBaari is a booking and queue-management platform. It does not diagnose, treat or give medical advice, and nothing in the apps or website is a substitute for a qualified doctor.',
+        "Doctors, hospitals, clinics and labs listed on MyBaari are independent. MyBaari does not employ them, recommend a particular one, or guarantee their qualifications, services or outcomes. Ratings are patients' own opinions.",
+      ],
+    },
+    {
+      h: 'Information shown',
+      p: ['Timings, fees, doctor availability, test details and queue estimates are supplied by facilities or calculated automatically, and can change or be inaccurate. Please confirm important details with the facility.'],
+    },
+  ],
+}
+
+export const mybaariPartnerTerms = {
+  slug: 'partner-terms',
+  scope: 'mybaari',
+  title: 'Partner Terms',
+  meta: 'Last updated 27 October 2026 · Applies to: MyBaari Partner (hospitals, clinics & labs)',
+  summary: 'These Partner Terms apply to hospitals, clinics and labs ("Facilities") that register on or use MyBaari Partner, and to their admins and staff, together with the Privacy Policy. The person registering a Facility confirms they are authorised to accept these terms on its behalf.',
+  sections: [
+    {
+      h: 'Registration and approval',
+      ul: [
+        'Register only a Facility you own or are authorised to manage. Provide accurate details — name, address, contact, timings, doctors and services — and keep them up to date.',
+        `New Facilities start "Under review". MyBaari may verify details and ask for documents (for example registration under the Clinical Establishments Act or state law, doctors' medical council registration, lab accreditation). Patients can find and book a Facility, and counter registrations open, only after approval.`,
+        'MyBaari may refuse, suspend or remove a Facility that provides false information, fails to serve patients, breaks the law or these terms. Reasons are recorded and shared where appropriate.',
+      ],
+    },
+    {
+      h: 'Admins, staff and accounts',
+      ul: [
+        "The Facility's admin invites staff by mobile number and chooses each person's permissions. The Facility is responsible for everything done by its admins and staff in MyBaari Partner, and for removing access promptly when someone leaves.",
+        'A mobile number can belong to only one workplace at a time. Every Facility must keep at least one admin.',
+        'Keep sign-in OTPs private. Do not share accounts.',
+      ],
+    },
+    {
+      h: 'Serving patients',
+      ul: [
+        'Honour confirmed bookings and queue tokens, keep doctor schedules and slot capacity accurate, and keep the OPD status (open / closed) correct. If you must cancel or reschedule, do it in the app so patients are informed.',
+        "Clinical care, diagnosis, reports, consultation fees and test charges are entirely the Facility's responsibility. MyBaari does not supervise medical practice.",
+        'Fees shown in MyBaari must match what you charge at the counter. Do not charge patients extra for booking through MyBaari.',
+      ],
+    },
+    {
+      h: 'Fees and payments',
+      ul: [
+        'MyBaari may charge patients a platform service fee per online booking (and for labs, may collect the home-collection fee online). These are set by MyBaari and shown to patients before they pay. Changes will be notified in advance.',
+        'Consultation fees and test charges are collected by the Facility directly. Cash collected at the counter can be recorded in MyBaari Partner for your reports; MyBaari does not hold or settle Facility money unless agreed separately in writing.',
+      ],
+    },
+    {
+      h: 'Patient data',
+      ul: [
+        "Patient details you receive through MyBaari may be used only to provide the booked service and to meet your legal duties. Keep them confidential and secure, do not use them for marketing without the patient's consent, and do not export them except as the law requires.",
+        'You are responsible, as a Data Fiduciary, for personal data you collect or record about patients for your own purposes, including clinical records, under the Digital Personal Data Protection Act, 2023 and medical confidentiality rules.',
+        `Tell MyBaari immediately at ${SUPPORT_CONTACT} if you suspect a staff account was misused or patient data was exposed.`,
+      ],
+    },
+    {
+      h: 'Acceptable use',
+      ul: [
+        'Use MyBaari Partner only to run your own Facility. Do not create false bookings or ratings, access data you are not permitted to see, share accounts, or try to disrupt, scrape or reverse engineer the service.',
+        'MyBaari is provided "as is". We work to keep it running but do not guarantee it will be uninterrupted or error-free. We may change features, with notice for significant changes.',
+      ],
+    },
+    {
+      h: 'Content and ratings',
+      ul: [
+        "You grant MyBaari a licence to show your Facility's name, logo, photos and details in the MyBaari apps and website. Make sure you have the rights to what you upload.",
+        'Patients may rate completed visits. MyBaari does not edit genuine ratings; report suspected fake or abusive ratings to support.',
+      ],
+    },
+    {
+      h: 'Liability and indemnity',
+      ul: [
+        'The Facility is solely liable for the medical and diagnostic services it provides and agrees to indemnify MyBaari against claims arising from those services, from inaccurate Facility information, or from misuse of patient data by its staff.',
+        "MyBaari's liability to a Facility is limited to the platform fees MyBaari received for that Facility in the 3 months before the claim, to the extent the law allows.",
+      ],
+    },
+    {
+      h: 'Ending the arrangement',
+      p: ["A Facility may stop using MyBaari at any time by contacting support; we will hide it from patients and cancel future bookings after informing the patients. MyBaari may end the arrangement with 30 days' notice, or immediately for serious breaches."],
+    },
+    {
+      h: 'General',
+      p: [`These terms are governed by the laws of India, with exclusive jurisdiction of courts at Delhi. Contact: ${SUPPORT_CONTACT}.`],
+    },
+  ],
+}
+
+export const mybaariGrievance = {
+  slug: 'grievance',
+  scope: 'mybaari',
+  title: 'Grievance & Contact',
+  meta: 'Last updated 27 October 2026 · Applies to: MyBaari (patients), MyBaari Partner (hospitals, clinics & labs)',
+  summary: 'We want to resolve problems quickly. Here is how to reach us and how complaints are handled, as required by the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the Consumer Protection (E-Commerce) Rules, 2020.',
+  sections: [
+    {
+      h: 'Customer support',
+      ul: [
+        'Patients: in the MyBaari app, go to Profile → Help & support (you will see our replies there).',
+        `Hospitals, clinics and labs, and anyone else: ${SUPPORT_CONTACT}.`,
+      ],
+    },
+    {
+      h: 'Grievance Officer',
+      ul: [
+        'Name: Kunal Mittal and Goutam Singla',
+        'Email: saralsoftworks@gmail.com',
+        'Address: Saral SoftWorks, Delhi, India',
+        'We acknowledge every complaint within 24 hours and aim to resolve it within 15 days. Complaints about content that is unlawful or about impersonation are acted on within the timelines the law sets.',
+      ],
+    },
+    {
+      h: 'What to include',
+      p: ['Your name and registered mobile number, what happened, the booking date and facility (if relevant), any payment ID, and what you would like us to do.'],
+    },
+    {
+      h: 'About us',
+      p: ['MyBaari is operated by Saral SoftWorks, Delhi, India. Website: https://www.saralsoftworks.in/mybaari.'],
+    },
+  ],
+}
+
+export const allDocs = [
+  companyPrivacy,
+  companyTerms,
+  mybaariPrivacy,
+  mybaariTerms,
+  mybaariRefunds,
+  mybaariAccountDeletion,
+  mybaariMedicalDisclaimer,
+  mybaariPartnerTerms,
+  mybaariGrievance,
+]

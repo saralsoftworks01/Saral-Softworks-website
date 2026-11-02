@@ -10,6 +10,9 @@ export const mybaariLegal = [
   { label: 'Terms of service', to: '/mybaari/terms' },
   { label: 'Refund & cancellation', to: '/mybaari/refunds' },
   { label: 'Account deletion', to: '/mybaari/delete-account' },
+  { label: 'Medical disclaimer', to: '/mybaari/medical-disclaimer' },
+  { label: 'Partner terms', to: '/mybaari/partner-terms' },
+  { label: 'Grievance & contact', to: '/mybaari/grievance' },
 ]
 
 function PlayButton() {
