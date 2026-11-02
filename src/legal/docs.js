@@ -265,6 +265,10 @@ export const mybaariRefunds = {
       h: 'Failed payments',
       p: ['If money was deducted but the payment failed, it is usually reversed automatically by your bank within 5–7 working days. If it is not, contact us with the payment ID and we will help.'],
     },
+    {
+      h: 'Delivery of service',
+      p: ['MyBaari is a digital service. Your booking confirmation and token are delivered instantly in the app; nothing is shipped physically.'],
+    },
   ],
 }
 
