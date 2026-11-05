@@ -230,7 +230,7 @@ export const mybaariRefunds = {
   slug: 'refunds',
   scope: 'mybaari',
   title: 'Refund & Cancellation Policy',
-  meta: 'Last updated 27 October 2026 · Applies to: MyBaari (patients)',
+  meta: 'Last updated 5 November 2026 · Applies to: MyBaari (patients)',
   summary: 'This policy covers amounts paid online to MyBaari through the app (the platform service fee and, for labs, any home-collection fee paid online). Consultation fees and test charges paid at the hospital, clinic or lab are refunded by that facility under its own policy.',
   sections: [
     {
@@ -255,6 +255,12 @@ export const mybaariRefunds = {
         'Refunds go back to the original payment method (UPI, card, net banking or wallet) through Razorpay. We do not refund in cash.',
         'Eligible refunds are initiated within 3 working days of the cancellation or of your request. Your bank usually credits them within 5–7 working days after that.',
         'Large refunds are checked by a senior MyBaari team member before they are issued, which can add a working day.',
+      ],
+    },
+    {
+      h: 'Final decision on refunds',
+      p: [
+        'All refunds are reviewed and approved by Saral Softworks, the company that runs MyBaari, and our decision on a refund is final. To prevent misuse, we may decline or reduce a refund. If you disagree with a decision, you can raise it through our [Grievance process](/mybaari/grievance).',
       ],
     },
     {

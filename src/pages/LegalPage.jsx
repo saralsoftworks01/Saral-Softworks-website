@@ -8,6 +8,20 @@ const companyLegal = [
   { label: 'Terms of use', to: '/terms' },
 ]
 
+// Turns [text](/path) in policy text into in-site links.
+function withLinks(text) {
+  return text.split(/(\[[^\]]+\]\([^)]+\))/).map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    return m ? (
+      <Link key={i} to={m[2]}>
+        {m[1]}
+      </Link>
+    ) : (
+      part
+    )
+  })
+}
+
 export default function LegalPage({ doc }) {
   usePageTitle(`${doc.title} | Saral Softworks`)
   const isProduct = doc.scope === 'mybaari'
@@ -47,12 +61,12 @@ export default function LegalPage({ doc }) {
                 {i + 1}. {s.h}
               </h2>
               {s.p?.map((p) => (
-                <p key={p}>{p}</p>
+                <p key={p}>{withLinks(p)}</p>
               ))}
               {s.ul && (
                 <ul>
                   {s.ul.map((li) => (
-                    <li key={li}>{li}</li>
+                    <li key={li}>{withLinks(li)}</li>
                   ))}
                 </ul>
               )}
